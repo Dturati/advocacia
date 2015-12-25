@@ -8,7 +8,12 @@ use Zend\Mvc\Controller\AbstractActionController;
 class IndexController extends AbstractActionController {
     
     public function indexAction() {
-        return new ViewModel();
+        $em = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        $repo = $em->getRepository('Advocacia\Entity\Cadastro');
+        $cadastro = $repo->findAll();
+
+       return new ViewModel(['cadastro' => $cadastro]);
+       
     }
     
 }
