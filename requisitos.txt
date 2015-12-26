@@ -1,0 +1,27 @@
+Cliente (Autor) Réu
+
+Nome 
+Endereço:
+{CPF, RG, E-mail, Tel:, }
+Relatório 
+
+Réu
+
+Local onde vai ser proposta a ação ou onde vai responder a ação.
+Nº do processo ....
+Código 
+Fórum 
+Cidade
+
+Tem que ter o lugar de colocar nº do processo, Código do Processo, Comarca
+
+
+funciona assim: ele entra na minha fala, ai começo a entrevista, primeiro eu qualifico ele, Conforme já falei, depois a pessoa ou empresa que ele pretende entrar com a ação contra, e ou se defender se for esse o réu, depois de qualificar ambos ele começa a contar a historinha de como aconteceu o caso, ai eu vou anotando tudo (precisa de um campo grande para anotar tudo o que ele me falar e eu perguntar), encerrada a entrevista, eu vou pedir os documentos que precisa para montar a ação ou defender ele (ex: se for uma ação trabalhista ele vai me passar documentos pessoais, carteira de trabalho, holerite, quais forem necessários), hoje eu tira cópia de tudo e faço uma pastinha, mas já em escritória digitalizando e deixando  salvo em no computador), no final eu imprimo tudo e o cliente assina
+
+
+Um lugar para escrever o nome dele completo, colocar o nº do RG e CPF, endereço, local que trabalhou ou trabalho, telefone e-mail
+
+tem que ter lugar para cadastrar os cliente Nome documentos pessoais, um campo pra escrever (entrevista), se for possível um campo pra digitalizar em PDF e ficar armazenado
+
+Rua Deputado Hitler Sansão, nº 306-W, Centro, CEP 78-300.000
+
