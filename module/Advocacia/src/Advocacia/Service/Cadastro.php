@@ -2,7 +2,7 @@
 namespace Advocacia\Service;
 
 use Doctrine\ORM\EntityManager;
-use Advocacia\Entity\CadastroService;
+use Advocacia\Entity\Cadastro as Cadastrar;
 
 class Cadastro
 {
@@ -16,6 +16,11 @@ class Cadastro
         $this->em = $em;
     }
     
- 
+    public function insert(array $data)
+    {
+        $entity = new Cadastrar($data);
+        $this->em->persist($entity);
+        $this->em->flush();
+    }
 
 }

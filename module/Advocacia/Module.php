@@ -1,10 +1,10 @@
 <?php
 
-
 namespace Advocacia;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Advocacia\Service\Cadastro as CadastroService;
 
 class Module
 {
@@ -25,8 +25,25 @@ class Module
         return array(
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
+                    __NAMESPACE__.'Admin'  => __DIR__ . '/src/' . __NAMESPACE__."Admin",
                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
                 ),
+            ),
+        );
+    }
+    
+    
+    public function getServiceConfig()
+    {
+        
+        return array(
+        
+        'factories' => array(
+            
+            'Advocacia\Service\Cadastro' => function ($service){
+                        return new CadastroService($service->get('Doctrine\ORM\EntityManager'));
+                },
+            
             ),
         );
     }

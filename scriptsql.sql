@@ -1,4 +1,4 @@
-#Banco de dados Escritório Lenandro
+#Banco de dados Escritório Leandro
 CREATE DATABASE advogacia_turati;
 USE advogacia_turati;
 
@@ -15,7 +15,7 @@ CREATE TABLE administrador(
 	id_administrador INTEGER NOT NULL AUTO_INCREMENT,
 	login_administrador VARCHAR(200) NOT NULL,
 	senha_administrador INTEGER NOT NULL,
-    PRIMARY KEY(id_administrador)
+        PRIMARY KEY(id_administrador)
 );
 SELECT * FROM administrador;
 INSERT INTO administrador(login_administrador, senha_administrador) VALUES('david','123');
@@ -40,8 +40,6 @@ SELECT * FROM cliente  WHERE primeiro_nome_cliente REGEXP  "da" or  sobrenome_no
 SELECT  * FROM cliente  WHERE primeiro_nome_cliente REGEXP "da";
 SELECT concat( 		 	  	) FROM cliente;
 DELETE FROM cliente WHERE id_cliente =3 ;
-
-
 
 CREATE TABLE endereco(
 	id_endereco INTEGER NOT NULL,
@@ -105,8 +103,7 @@ CREATE TABLE local_acao(
 	cep_local_acao VARCHAR(200),
 	numero_local_acao VARCHAR(200),
 	complemento_local_acao VARCHAR(200),
-	referecia_loca         
-    l_acao VARCHAR(200),
+	referecia_local_acao VARCHAR(200),
 	FOREIGN KEY (id_local_acao) REFERENCES cliente(id_cliente)
 );
 

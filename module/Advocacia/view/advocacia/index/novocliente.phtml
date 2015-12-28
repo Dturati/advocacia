@@ -1,0 +1,13 @@
+<?php
+    $form = $this->form;
+    $form->setAttribute('action',$this->url('novocliente',array('controller' => 'advocacia', 'action' => 'novocliente')));
+
+
+    $form->prepare();
+
+    echo $this->form()->openTag($form);
+    echo $this->formHidden($form->get('id'));
+    echo $this->formRow($form->get('nomecompleto'));
+    echo $this->formSubmit($form->get('submit'));
+    
+    echo $this->form()->closeTag();

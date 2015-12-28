@@ -1,5 +1,5 @@
 <?php foreach ($this->cadastro as $dados): ?>
-<h3><?php echo $dados->getNome(); ?> </h3>
-<h3><?php echo $dados->getCpf_cnpj(); ?> </h3>
-<h3><?php echo $dados->getRG(); ?> </h3>
+<h3><?php echo $dados->getNomecompleto(); ?> </h3>
 <?php endforeach; ?>
+
+<?php echo $this->paginationControl($this->cadastro,'Sliding','/paginator/paginator'); ?>

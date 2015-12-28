@@ -5,22 +5,38 @@ namespace Advocacia;
 return array(
     'router' => array(
         'routes' => array(
+            
+            
             'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'type' => 'Segment',
                 'options' => array(
-                    'route'    => '/',
+                    'route'    => '/cadastro[/:action][/page/:page]',
                     'defaults' => array(
-                        'controller' => 'Advocacia\Controller\Index',
+                        'controller' => 'advocacia',
                         'action'     => 'index',
+                        'page'          => 1,
                     ),
                 ),
             ),
+            
+             'novocliente' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => '/novocliente',
+                    'defaults' => array(
+                        'controller' => 'advocacia',
+                        'action'     => 'novocliente',
+                    ),
+                ),
+            ),
+            
+            
         ),
     ),
 
     'controllers' => array(
         'invokables' => array(
-            'Advocacia\Controller\Index' => 'Advocacia\Controller\IndexController'
+            'advocacia' => 'Advocacia\Controller\IndexController',
         ),
     ),
     'view_manager' => array(

@@ -1,13 +1,15 @@
 CREATE DATABASE advocacia;
 USE advocacia;
 CREATE TABLE cliente(
-	id_cliente 			INTEGER UNIQUE AUTO_INCREMENT,
-    nome_completo 		VARCHAR(200),
-    cpf_cnpj			VARCHAR(200),
+	id					INTEGER UNIQUE AUTO_INCREMENT,
+    nomecompleto 		VARCHAR(200),
+    cpfcnpj				VARCHAR(200),
 	RG					VARCHAR(200),
-    data_hora_cadastro	DATETIME,
-    PRIMARY KEY(id_cliente)
+    datahoracadastro	DATETIME,
+    PRIMARY KEY(idcliente)
 );
-DROP TABLE cadastro;
-SELECT * FROM cadastro;
-INSERT INTO cadastro(nome) VALUES('David');
+DROP TABLE cliente;
+SELECT * FROM cliente;
+INSERT INTO cliente(nomecompleto) 
+VALUES('Pedro Silva');
+TRUNCATE cliente;
