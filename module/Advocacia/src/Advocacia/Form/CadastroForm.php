@@ -27,7 +27,48 @@ class CadastroForm extends Form
           ),
           'attributes'  =>  array(
                         'id'            =>      'nomecompleto',
-                        'placeholder'   =>      'Digite o nome',     
+                        'placeholder'   =>      'Digite o nome', 
+                         'class'        =>       "form-control"
+          ),
+      ));
+      
+        $this->add(array(
+         'name'         => 'cpfcnpj',
+          'options'     => array(
+                                'type'      => 'text',
+                                 'label'    => 'CPF-CNPJ',
+          ),
+          'attributes'  =>  array(
+                        'id'            =>      'cpfcnpj',
+                        'placeholder'   =>      'Entre com o CPF ou CNPJ', 
+                         'class'        =>       "form-control"
+          ),
+      ));
+        
+        $this->add(array(
+         'name'         => 'RG',
+          'options'     => array(
+                                'type'      => 'text',
+                                 'label'    => 'RG',
+          ),
+          'attributes'  =>  array(
+                        'id'            =>      'RG',
+                        'placeholder'   =>      'Entre com o RG',
+                        'class'        =>       "form-control"
+          ),
+      ));
+        
+        
+          $this->add(array(
+         'name'         => 'tipo',
+          'options'     => array(
+                                'type'      => 'text',
+                                 'label'    => 'Tipo cliente',
+          ),
+          'attributes'  =>  array(
+                        'id'            =>      'tipo',
+                        'placeholder'   =>      'Entre com o tipo do cliente',
+                        'class'        =>       "form-control"
           ),
       ));
       
@@ -36,8 +77,8 @@ class CadastroForm extends Form
                 'name' => 'submit',
                 'type'  => 'Zend\Form\Element\Submit',
                 'attributes'    => array(
-                    'value'    => 'Salvar',
-                    'class'     => 'btn-success'
+                    'value'     => 'Salvar',
+                    'class'     => "btn btn-default"
                 )
         ));
       

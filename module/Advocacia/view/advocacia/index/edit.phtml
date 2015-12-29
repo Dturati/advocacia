@@ -1,6 +1,6 @@
 <?php
     $form = $this->form;
-    $form->setAttribute('action',$this->url('novocliente',array('controller' => 'advocacia', 'action' => 'novocliente')));
+    $form->setAttribute('action',$this->url('editar',array('controller' => 'advocacia', 'action' => 'edit')));
 
 
     $form->prepare();
@@ -13,7 +13,7 @@
             <?php  echo $this->formRow($form->get('nomecompleto')); ?>
             <?php  echo $this->formRow($form->get('RG')); ?>
             <?php  echo $this->formRow($form->get('cpfcnpj')); ?>
-            <?php  echo $this->formRow($form->get('tipo')); ?>
+            <?php   echo $this->formRow($form->get('tipo')); ?>
             <?php  echo $this->formSubmit($form->get('submit')); ?>  
         </div>
     </div>

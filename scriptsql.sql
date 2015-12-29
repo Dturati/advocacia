@@ -1,15 +1,3 @@
-#Banco de dados Escritório Leandro
-CREATE DATABASE advogacia_turati;
-USE advogacia_turati;
-
-DELETE FROM cliente WHERE  id_cliente <> 0;
-TRUNCATE TABLE local_acao;
-TRUNCATE TABLE endereco;
-TRUNCATE TABLE contatos;
-TRUNCATE TABLE processo;
-TRUNCATE TABLE local_acao;
-TRUNCATE TABLE entrevista;
-SELECT * FROM cliente  JOIN endereco JOIN contatos WHERE id_cliente = id_endereco AND id_contatos=id_cliente;
 
 CREATE TABLE administrador(
 	id_administrador INTEGER NOT NULL AUTO_INCREMENT,
@@ -17,29 +5,20 @@ CREATE TABLE administrador(
 	senha_administrador INTEGER NOT NULL,
         PRIMARY KEY(id_administrador)
 );
-SELECT * FROM administrador;
-INSERT INTO administrador(login_administrador, senha_administrador) VALUES('david','123');
+
 
 CREATE TABLE cliente(
 	id_cliente INTEGER NOT NULL AUTO_INCREMENT,
 	primeiro_nome_cliente VARCHAR(200) NOT NULL,
-	sobrenome_nome_cliente VARCHAR(200) NOT NULL,	
+	sobrenome_nome_cliente VARCHAR(200) NOT NULL,
 	cpf_cnpj_cliente VARCHAR(200) NOT NULL,
 	RG_cliente VARCHAR(200) NOT NULL,
-        hora_entrada_cliente TIME NOT NULL,
-        data_entrada_cliente DATE NOT NULL,
-        tipo_cliente VARCHAR(20) NOT NULL,
+  hora_entrada_cliente TIME NOT NULL,
+  data_entrada_cliente DATE NOT NULL,
+	tipo_cliente VARCHAR(20) NOT NULL,
 	PRIMARY KEY(id_cliente)
 );
-TRUNCATE TABLE cliente;
-INSERT INTO cliente(primeiro_nome_cliente, sobrenome_nome_cliente , cpf_cnpj_cliente, RG_cliente, hora_entrada_cliente, data_entrada_cliente, tipo_cliente) VALUES('pirua','ranca','123','1234',CURTIME(), CURDATE(),'reu');
-SELECT *FROM cliente;
-DROP TABLE cliente;
-DELETE FROM cliente WHERE  id_cliente <> 0;
-SELECT * FROM cliente  WHERE primeiro_nome_cliente REGEXP  "da" or  sobrenome_nome_cliente regexp "da";
-SELECT  * FROM cliente  WHERE primeiro_nome_cliente REGEXP "da";
-SELECT concat( 		 	  	) FROM cliente;
-DELETE FROM cliente WHERE id_cliente =3 ;
+
 
 CREATE TABLE endereco(
 	id_endereco INTEGER NOT NULL,
@@ -72,7 +51,7 @@ DELETE FROM contatos WHERE id_contatos = 5;
 TRUNCATE TABLE contatos;
 
 CREATE TABLE entrevista(
-	id_entrevista INTEGER NOT NULL,
+	  id_entrevista INTEGER NOT NULL,
     entrevista_entrevista TEXT,
     FOREIGN KEY (id_entrevista) REFERENCES cliente(id_cliente)
 );
@@ -94,7 +73,7 @@ CREATE TABLE acesso_usuario(
 	acesso_externo BOOLEAN NOT NULL,
 	FOREIGN KEY (id_acesso_usuario) REFERENCES cliente(id_cliente)
 );
-  
+
 CREATE TABLE local_acao(
 	id_local_acao INTEGER NOT NULL,
 	local_acao VARCHAR(200) NOT NULL,
@@ -113,4 +92,3 @@ CREATE TABLE anexo(
     arquivo_anexo VARCHAR(200)
 );
 SELECT * FROM anexo;
-

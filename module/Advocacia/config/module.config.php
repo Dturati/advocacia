@@ -16,6 +16,21 @@ return array(
                         'action'     => 'index',
                         'page'          => 1,
                     ),
+                  
+                ),
+            ),
+            
+             'editar' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => '/edit[/:id]',
+                    'defaults' => array(
+                        'controller' => 'advocacia',
+                        'action'     => 'edit',
+                    ),
+                      'constraints'   => array(
+                        'id'    => '[0-9]+'
+                    ),
                 ),
             ),
             
@@ -29,7 +44,7 @@ return array(
                     ),
                 ),
             ),
-            
+              
             
         ),
     ),

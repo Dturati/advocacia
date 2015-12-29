@@ -6,10 +6,6 @@ CREATE TABLE cliente(
     cpfcnpj				VARCHAR(200),
 	RG					VARCHAR(200),
     datahoracadastro	DATETIME,
-    PRIMARY KEY(idcliente)
+    tipo				VARCHAR(200),
+    PRIMARY KEY(id)
 );
-DROP TABLE cliente;
-SELECT * FROM cliente;
-INSERT INTO cliente(nomecompleto) 
-VALUES('Pedro Silva');
-TRUNCATE cliente;

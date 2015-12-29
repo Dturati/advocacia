@@ -1,5 +1,21 @@
+
+<table class="table table-bordered">
+    <tr>
+        <th>Nome</th>
+        <th>CPF/CNPJ</th>
+        <th>RG</th>
+        <th>Tipo</th>
+        <th>Editar</th>
+    </tr>
+<tr>
 <?php foreach ($this->cadastro as $dados): ?>
-<h3><?php echo $dados->getNomecompleto(); ?> </h3>
-<?php endforeach; ?>
+<td>    <?php echo $dados->getNomecompleto(); ?></td>
+<td><?php echo $dados->getCpfcnpj(); ?> </td>
+<td><?php echo $dados->getRG(); ?> </td>
+<td><?php echo $dados->getTipo(); ?> </td>
+<td><a href="<?php echo $this->url("editar",array("controller" => "advocacia", 'action' => 'edit', 'id' => $dados->getId())); ?>">Editar</a></td>
+</tr>
+ <?php endforeach; ?>
+</table>
 
 <?php echo $this->paginationControl($this->cadastro,'Sliding','/paginator/paginator'); ?>
